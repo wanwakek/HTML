@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Youtube Thumbnail Generator </title>
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">-->
+<style>
+.body{width:600px}
+#page_content {text-align:center}
+a.btn-default{color:#333} 
+a.btn-primary,a.btn-success,a.btn-info,a.btn-warning,a.btn-danger{color:#fff} 
+.btn,.btn:active{background-image:none} 
+.btn,.btn-link{font-weight:400} 
+.btn{display:inline-block;padding:6px 12px;margin-bottom:5px;font-size:14px;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;border-radius:4px} 
+.btn:active:focus,.btn:focus{outline:0;} 
+.btn:focus,.btn:hover{color:#333;text-decoration:none;outline:0;} 
+.btn:active{outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)} 
+.btn-default{color:#333;background-color:#fff;border-color:#ccc} 
+.btn-default:focus{color:#333;background-color:#e6e6e6;border-color:#8c8c8c} 
+.btn-default:active,.btn-default:hover{color:#333;background-color:#e6e6e6;border-color:#adadad} 
+.btn-primary{color:#fff;background-color:#337ab7;border-color:#2e6da4} 
+.btn-primary:focus{color:#fff;background-color:#286090;border-color:#122b40} 
+.btn-primary:active,.btn-primary:hover{color:#fff;background-color:#286090;border-color:#204d74} 
+.btn-success{color:#fff;background-color:#5cb85c;border-color:#4cae4c} 
+.btn-success:focus{color:#fff;background-color:#449d44;border-color:#255625} 
+.btn-success:active,.btn-success:hover{color:#fff;background-color:#449d44;border-color:#398439} 
+.btn-info{color:#fff;background-color:#5bc0de;border-color:#46b8da} 
+.btn-info:focus{color:#fff;background-color:#31b0d5;border-color:#1b6d85} 
+.btn-info:active,.btn-info:hover{color:#fff;background-color:#31b0d5;border-color:#269abc} 
+.btn-warning{color:#fff;background-color:#f0ad4e;border-color:#eea236} 
+.btn-warning:focus{color:#fff;background-color:#ec971f;border-color:#985f0d} 
+.btn-warning:active,.btn-warning:hover{color:#fff;background-color:#ec971f;border-color:#d58512} 
+.btn-danger{color:#fff;background-color:#d9534f;border-color:#d43f3a} 
+.btn-danger:focus{color:#fff;background-color:#c9302c;border-color:#761c19} 
+.btn-danger:active,.btn-danger:hover{color:#fff;background-color:#c9302c;border-color:#ac2925} 
+.btn-link{color:#337ab7;border-radius:0} 
+.btn-link,.btn-link:active{background-color:transparent;-webkit-box-shadow:none;box-shadow:none} 
+.btn-link,.btn-link:active,.btn-link:focus,.btn-link:hover{border-color:transparent} 
+.btn-link:focus,.btn-link:hover{color:#23527c;text-decoration:underline;background-color:transparent} 
+.btn-lg{padding:10px 16px;font-size:18px;line-height:1.3333333;border-radius:6px} 
+.btn-sm,.btn-xs{font-size:12px;line-height:1.5;border-radius:3px} 
+.btn-sm{padding:5px 10px} .btn-xs{padding:1px 5px} 
+.btn-block{display:block;width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box} 
+.btn-block+.btn-block{margin-top:5px}
+
+.form-group{background:#f5f5f5;width:98%;margin:20px 5px 30px 5px;padding:10px 10px 20px 10px;border:1px solid#ddd}
+input{width:90%;margin-top:20px;padding:10px 0px 10px}
+.footer{font-size:8px}
+#container{padding-top:10px}
+.get{width:100%;margin:10px 5px 5px 5px}
+
+</style>
+</head>
+<body>
+<div id="page_content">
+<h1>Youtube Thumbnail Generator</h1>
+<!--<p>By <a href="http://www.kompiajaib.com/" title="Kompi Ajaib">AMP HTML BLOG</a></p>-->
+  <form>
+    <div class="form-group">
+        <label for="videoID" class="example">Youtube Video ID example: <span class="ex-text">https://www.youtube.com/watch?v=</span><b>anMYu17aZT4</b></label>
+        <input type="text" class="form-control" id="videoID" placeholder="Put Youtube Video ID Here" />
+    </div>
+</form>
+    <div class="get">
+<button class="btn btn-block" id="get-button" type="submit" onclick='getThumbs()'>Get Thumbnail</button>
+            </div>
+<div id="container">
+    <button type="button" class="btn btn-info" onClick="window.location.href=window.location.href">Get Another Thumbnail</button>
+<div id="thumbnail_container"></div>
+</div>
+<div class="footer">
+Credit to <a href="https://www.binarymoon.co.uk/" target="_blank" rel="nofollow">Binary Moon</a>
+</div>
+</div>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+<script type='text/javascript' src='js/ytg-script.js'></script>
+</body>
+</html>
